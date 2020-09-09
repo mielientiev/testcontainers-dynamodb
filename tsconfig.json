@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "ES2018",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "pretty": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noImplicitThis":  true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "diagnostics": true,
+    "allowUnreachableCode": false,
+    "charset": "utf-8",
+    "newLine": "LF",
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "lib": [
+      "ES2018"
+    ],
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ]
+    },
+    "types": ["jest", "node"],
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
