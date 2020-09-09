@@ -41,7 +41,7 @@
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
   },
-  "dependencies": {
+  "peerDependencies": {
     "aws-sdk": "^2.748.0"
   }
 }
