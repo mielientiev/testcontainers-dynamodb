@@ -1,5 +1,9 @@
 
-# DynamoDB
+# Testcontainers DynamoDB
+Local DynamoDB implementation for https://www.testcontainers.org/
+
+## Install
+`npm i -D testcontainers-dynamodb`
 
 ## Example:
 
