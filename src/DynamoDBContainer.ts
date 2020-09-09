@@ -6,7 +6,7 @@ import { Port } from 'testcontainers/dist/port'
 import { StopOptions } from 'testcontainers/dist/test-container'
 import { DynamoDB } from 'aws-sdk'
 
-export class StartedDynamoDbContainer implements StartedTestContainer {
+export class StartedDynamoDBContainer implements StartedTestContainer {
   constructor(
     private readonly startedContainer: StartedTestContainer,
     private readonly initData: Array<TableInitStructure>,
@@ -105,8 +105,8 @@ export class DynamoDBContainer extends GenericContainer {
     this.withExposedPorts(DynamoDBContainer.MAPPED_PORT)
   }
 
-  async start(): Promise<StartedDynamoDbContainer> {
-    const startedContainer = new StartedDynamoDbContainer(await super.start(), this.initStructure)
+  async start(): Promise<StartedDynamoDBContainer> {
+    const startedContainer = new StartedDynamoDBContainer(await super.start(), this.initStructure)
     await startedContainer.resetData()
 
     return startedContainer

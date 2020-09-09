@@ -1,7 +1,6 @@
-const { defaults } = require('jest-config/build/index')
-
 module.exports = {
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/tests'],
+  verbose: true,
   transform: {
     '^.+\\.ts?$': 'ts-jest',
   },
@@ -10,8 +9,6 @@ module.exports = {
       tsConfig: 'tsconfig.json',
     },
   },
-  preset: 'ts-jest',
   testEnvironment: 'node',
-  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts'],
   reporters: ['default'],
 }

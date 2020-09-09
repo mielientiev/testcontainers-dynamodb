@@ -1,0 +1,1 @@
+export { DynamoDBContainer } from './DynamoDBContainer'

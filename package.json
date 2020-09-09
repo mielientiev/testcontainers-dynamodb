@@ -1,12 +1,19 @@
 {
   "name": "testcontainers-dynamodb",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Ihor Mielientiev",
   "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
     "test": "jest",
     "lint": "eslint 'src/*.ts'",
     "lint:fix": "eslint --fix 'src/*.ts'"
   },
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "docker",
     "testcontainers",
@@ -25,13 +32,14 @@
     "url": "https://github.com/mielientiev/testcontainers-dynamodb/issues"
   },
   "devDependencies": {
-    "jest": "^26.4.2",
-    "testcontainers": "^3.4.3",
-    "ts-jest": "^26.3.0",
-    "typescript": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
+    "testcontainers": "^3.4.3",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
   },
   "dependencies": {
     "aws-sdk": "^2.748.0"

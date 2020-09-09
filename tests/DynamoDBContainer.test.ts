@@ -1,4 +1,4 @@
-import { DynamoDBContainer, StartedDynamoDbContainer } from './DynamoDBContainer'
+import { DynamoDBContainer, StartedDynamoDBContainer } from '../src/DynamoDBContainer'
 
 const initDataTest = [
   {
@@ -59,7 +59,7 @@ const initDataTest = [
 describe('DynamoDB container', () => {
   jest.setTimeout(120000)
 
-  let startedContainer: StartedDynamoDbContainer
+  let startedContainer: StartedDynamoDBContainer
   beforeAll(async() => {
     startedContainer = await new DynamoDBContainer().start()
   })

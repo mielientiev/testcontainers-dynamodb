@@ -42,7 +42,7 @@ const initDataTest = [
 describe('DynamoDB container', () => {
   jest.setTimeout(120000)
 
-  let startedContainer: StartedDynamoDbContainer
+  let startedContainer: StartedDynamoDBContainer
   beforeAll(async() => {
     startedContainer = await new DynamoDBContainer().start()
   })
