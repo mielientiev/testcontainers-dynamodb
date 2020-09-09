@@ -1,6 +1,6 @@
 {
   "name": "testcontainers-dynamodb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ihor Mielientiev",
   "scripts": {
     "build": "npm run clean && tsc",
@@ -39,7 +39,8 @@
     "rimraf": "^3.0.2",
     "testcontainers": "^3.4.3",
     "ts-jest": "^26.3.0",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "aws-sdk": "^2.748.0"
   },
   "peerDependencies": {
     "aws-sdk": "^2.748.0"
