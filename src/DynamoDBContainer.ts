@@ -81,13 +81,25 @@ export class StartedDynamoDBContainer implements StartedTestContainer {
       if (tableStructure.items && tableStructure.items.length > 0) {
         const tableName = tableStructure.table.TableName
         const putRequests = tableStructure.items.map(x => ({ PutRequest: { Item: x } }))
-        await documentClient.batchWrite({
-          RequestItems: {
-            [tableName]: putRequests,
-          },
-        }).promise()
+
+        for (const requests of this.chunkArray(putRequests, 25)) {
+          await documentClient.batchWrite({
+            RequestItems: {
+              [tableName]: requests,
+            },
+          }).promise()
+        }
       }
     }
+  }
+
+  private chunkArray<A>(array: Array<A>, size: number): Array<Array<A>> {
+    let result = []
+    for (let i = 0; i < array.length; i += size) {
+      let chunk = array.slice(i, i + size)
+      result.push(chunk)
+    }
+    return result
   }
 }
 

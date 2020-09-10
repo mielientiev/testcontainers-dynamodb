@@ -1,6 +1,6 @@
 {
   "name": "testcontainers-dynamodb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Ihor Mielientiev",
   "scripts": {
     "build": "npm run clean && tsc",
